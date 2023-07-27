@@ -1,0 +1,17 @@
+<p><%= link_to edit_task_path, class: 'btn btn-light btn-sm border' do %>
+    <i class="fa fa-pencil"></i> Edit this task
+  <% end %></p>
+<h1><%= @tasks.title %></h1>
+
+<p><%= @tasks.details%></p>
+
+<% if @tasks.completed %>
+  <i class="fa fa-check-square-o"></i>This task is completed
+<% else %>
+  <i class="fa fa-square-o"></i>This task is not completed yet
+<% end %>
+
+<hr>
+  <%= link_to tasks_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
